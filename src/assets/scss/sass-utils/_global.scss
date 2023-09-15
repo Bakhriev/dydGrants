@@ -107,11 +107,11 @@ body {
 }
 
 .burger {
-	width: 16px;
+	width: 24px;
 	height: 16px;
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
+	justify-content: space-between;
 
 	// .burger__line
 
