@@ -33,7 +33,6 @@ export const burgerMenu = () => {
 
 	const onResize = debounce(() => {
 		const {innerWidth} = window
-		console.log('resize')
 
 		if (innerWidth > 991.98) {
 			if (headerNavigation.classList.contains('opened')) {
