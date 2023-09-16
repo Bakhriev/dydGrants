@@ -94,12 +94,16 @@ body {
 .btn--blue {
 	background-color: $accent-brand;
 	color: #fff;
+}
 
+.btn--blue_state_hover {
 	transition: background-color 300ms ease-in-out;
-
 	@include hover {
 		background-color: #504eef;
 	}
+}
+
+.btn--blue_state_active {
 	&:active {
 		scale: 0.97;
 	}
@@ -107,12 +111,40 @@ body {
 
 .btn--gray {
 	background-color: $background-secondary;
+	color: $text-icon-primary;
+}
+
+.btn--gray_state_hover {
+	transition: background-color 300ms ease-in-out;
+	@include hover {
+		background-color: #252534;
+	}
+}
+
+.btn--gray_state_active {
+	&:active {
+		scale: 0.97;
+	}
 }
 
 .btn--with-arrow {
-	display: grid;
-	grid-area: 12px;
+	display: flex;
 	align-items: center;
+	gap: 12px;
+}
+
+.btn-small-arrow {
+	width: 16px;
+	height: 16px;
+}
+
+.btn-white-arrow {
+	stroke: #fff;
+}
+
+.title-1 {
+	font-family: 'Circular Std', serif;
+	font-weight: 700;
 }
 
 .burger {
