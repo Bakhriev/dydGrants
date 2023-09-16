@@ -1,3 +1,5 @@
+import {debounce} from './debounce'
+
 export const burgerMenu = () => {
 	const headerBurger = document.querySelector('.header__burger')
 	const headerNavBurger = document.querySelector('.header__navigation-burger')
@@ -26,8 +28,19 @@ export const burgerMenu = () => {
 	})
 
 	window.addEventListener('resize', () => {
-		const {innerWidth} = window
-		if (innerWidth > 991.98) {
-		}
+		onResize()
 	})
+
+	const onResize = debounce(() => {
+		const {innerWidth} = window
+		console.log('resize')
+
+		if (innerWidth > 991.98) {
+			if (headerNavigation.classList.contains('opened')) {
+				overlay.classList.remove('active')
+				headerNavigation.classList.remove('opened')
+				body.classList.remove('disable-scroll')
+			}
+		}
+	}, 170)
 }

@@ -94,6 +94,15 @@ body {
 .btn--blue {
 	background-color: $accent-brand;
 	color: #fff;
+
+	transition: background-color 300ms ease-in-out;
+
+	@include hover {
+		background-color: #504eef;
+	}
+	&:active {
+		scale: 0.97;
+	}
 }
 
 .btn--gray {
