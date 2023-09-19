@@ -90,20 +90,12 @@ body {
 
 	text-align: center;
 	white-space: nowrap;
-}
-.btn--blue {
 	background-color: $accent-brand;
 	color: #fff;
-}
-
-.btn--blue_state_hover {
 	transition: background-color 300ms ease-in-out;
 	@include hover {
 		background-color: #504eef;
 	}
-}
-
-.btn--blue_state_active {
 	&:active {
 		scale: 0.97;
 	}
@@ -112,18 +104,9 @@ body {
 .btn--gray {
 	background-color: $background-secondary;
 	color: $text-icon-primary;
-}
-
-.btn--gray_state_hover {
 	transition: background-color 300ms ease-in-out;
 	@include hover {
 		background-color: #252534;
-	}
-}
-
-.btn--gray_state_active {
-	&:active {
-		scale: 0.97;
 	}
 }
 

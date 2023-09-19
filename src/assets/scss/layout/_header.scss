@@ -93,12 +93,20 @@
 		}
 	}
 
-	// .header__btn
+	// .header__btns
 
-	&__btn {
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px 25px;
 		@media screen and (max-width: 992px) {
 			margin-left: auto;
 		}
+	}
+
+	// .header__btn
+
+	&__btn {
 		@media screen and (max-width: 375px) {
 			padding: 10px 14px;
 		}
@@ -121,6 +129,7 @@
 	}
 }
 .logo {
+	flex-shrink: 0;
 	// .logo__img
 
 	&__img {
