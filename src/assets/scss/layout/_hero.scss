@@ -27,10 +27,15 @@
 				right: 60px;
 				width: 277px;
 				height: 24px;
+				animation: delayBlock 5s linear;
 			}
 		}
 		&--fixed {
 			max-width: 810px;
+		}
+
+		span {
+			display: inline-block;
 		}
 
 		margin: 0 auto 40px;
@@ -166,5 +171,14 @@
 		@media screen and (max-width: 767px) {
 			font-size: 16px;
 		}
+	}
+}
+
+@keyframes delayBlock {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
