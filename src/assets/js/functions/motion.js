@@ -1,20 +1,33 @@
-import {animate, stagger} from 'motion'
+import {animate} from 'motion'
 
 export const animateTitle = () => {
-	const heroTitle = document.querySelector('[data-hero-title]')
-
-	let letters = heroTitle.innerText.replace(/\s+/g, ' ').trim().split('')
-	const lettersLength = letters.length
-	heroTitle.innerText = ''
-	for (let i = 0; i < lettersLength; i++) {
-		const span = document.createElement('span')
-		span.textContent = letters[i]
-		heroTitle.appendChild(span)
-	}
-
 	animate(
-		'[data-hero-title] span',
-		{opacity: [0, 1], y: [-20, 0], x: [-10, 0]},
-		{duration: 0.3, delay: stagger(0.1)}
+		'[data-title-animate]',
+		{y: [-40, 0], opacity: [0, 1]},
+		{duration: 0.6}
+	)
+}
+
+export const animateHeader = () => {
+	animate(
+		'.header',
+		{x: [-50, 0], opacity: [0, 1]},
+		{duration: 0.6, delay: 0.4}
+	)
+}
+
+export const animateButtons = () => {
+	animate(
+		'.hero__buttons',
+		{y: [50, 0], opacity: [0, 1]},
+		{duration: 0.6, delay: 0.6}
+	)
+}
+
+export const animateCircle = (items, duration, delay) => {
+	animate(
+		items,
+		{clipPath: ['circle(0%)', 'circle(100%)']},
+		{duration: duration, delay: delay}
 	)
 }
